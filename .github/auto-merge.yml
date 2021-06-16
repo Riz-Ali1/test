@@ -5,18 +5,17 @@
 # https://developer.github.com/v4/enum/commentauthorassociation/
 minApprovals:
   MEMBER: 1
-  COLLABORATOR: 2
+
 
 # Pull requests will only be automatically merged when all of these reviewers have approved the
 # pull request.
-requiredReviewers:
-- rogerluan
+
 
 # The maximum number of reviews from each association that request changes to the pull request.
 # Setting this number higher than 0 will allow automatic merging while changes are still requested.
 # Requested changes from associations not defined in this list are ignored for automatic merging.
-maxRequestedChanges:
-  COLLABORATOR: 0
+# maxRequestedChanges:
+#   COLLABORATOR: 0
 
 # Whether an out-of-date pull request is automatically updated.
 # It does so by merging its base on top of the head of the pull request.
@@ -78,14 +77,14 @@ blockingLabels:
 # Whenever required labels are configured, pull requests will only be automatically merged whenever
 # all of these labels are attached to a pull request.
 requiredLabels:
-- merge
+- codedays
 
-# Pull requests will only be automatically merged if there is a match between the regular expression
-# and its title
-requiredTitleRegex: '\bmerge\b'
+# # Pull requests will only be automatically merged if there is a match between the regular expression
+# # and its title
+# requiredTitleRegex: '\bmerge\b'
 
-# Automatic merges will be blocked if there is a match between the regular expression and title
-blockingTitleRegex: '\bwip\b'
+# # Automatic merges will be blocked if there is a match between the regular expression and title
+# blockingTitleRegex: '\bwip\b'
 
-# Automatic merges will be blocked if there is a match between the regular expression and body
-blockingBodyRegex: '\bDo not merge\b'
+# # Automatic merges will be blocked if there is a match between the regular expression and body
+# blockingBodyRegex: '\bDo not merge\b'
